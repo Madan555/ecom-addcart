@@ -1,0 +1,21 @@
+.form-control{
+    margin: 5px;
+    padding: 3px;
+    margin-left: 50px !important ;
+    width: 600px;
+}
+.icons{
+    z-index: 4;
+    color: black;
+    position: absolute;
+    left: 57%;
+    top: 35%;
+    cursor: pointer;
+
+}
+.count-notif{
+    vertical-align:middle;
+    margin-left:-15px;
+    margin-top: -20px;
+    font-size:13px;
+  }

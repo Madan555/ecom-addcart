@@ -1,0 +1,41 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a href="" (click)="filterProducts('')">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.QSCKhbq9IpMSl6a7tbqIwwHaHa&pid=Api&P=0&w=162&h=162" alt="">
+           <h6>All Products</h6> </a>
+        </div>
+        <div class="items">
+            <a href="" (click)="filterProducts('electronics')">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.y5XYkGuo_rbNaaslSi5U6AHaE7&pid=Api&P=0&w=249&h=165" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="" (click)="filterProducts('fashion')">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.qPd066kZ7xptFb36OgbJ8gHaHa&pid=Api&P=0&w=186&h=186" alt="">
+                <h6>Fashions</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="" (click)="filterProducts('jewelery')">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.5_bhwneNM1FMUuf9oRvlFwHaHa&pid=Api&P=0&w=169&h=169" alt="">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let prod of productList">
+            <div class="card col-md-3 mt-3" >
+                <img src="{{prod.image}}" alt="">
+                <h5 class="itemdata">{{prod.title}}</h5>
+                <p class="itemdata">{{prod.description}}</p>
+                <p>Price <strong>{{prod.price |currency}} </strong></p>
+                <button class="btn btn-primary" (click)="addtocart(prod)">Add To Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
